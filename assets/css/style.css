@@ -1,0 +1,67 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+div {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: darkred;
+    animation-name: spinRound;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.one {
+    animation-delay: 0s;
+}
+
+.two {
+    animation-delay: 2s;
+}
+
+.three {
+    animation-delay: 4s;
+}
+
+.four {
+    animation-delay: 6s;
+}
+
+@keyframes spinRound {
+
+    0%,
+    100% {
+        background-color: darkred;
+        top: 0;
+        left: 0;
+    }
+
+    25% {
+        background-color: yellow;
+        top: 0;
+        left: calc(100% - 100px);
+    }
+
+    50% {
+        background-color: lime;
+        position: absolute;
+        top: calc(100% - 100px);
+        left: calc(100% - 100px);
+        transition: all 2s linear;
+    }
+
+    75% {
+        background-color: blue;
+        position: absolute;
+        top: calc(100% - 100px);
+        left: 0;
+        transition: all 2s linear;
+    }
+
+}
